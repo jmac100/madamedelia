@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<app-menu></app-menu>
+<div class="banner hidden-sm hidden-xs">
+    <img src="../assets/london_paris_banner.png" class="img-responsive">
+</div>
+<div class="container body-content">
+    <router-outlet></router-outlet>
+    <footer>
+        <p>&copy; {{ footerDate }} - Madame D'Elia</p>
+    </footer>
+</div>
