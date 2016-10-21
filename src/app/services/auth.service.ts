@@ -7,7 +7,15 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
 
-  lock = new Auth0Lock('IAhCDwQyyKwBDkcVKeepqLRuuSlmV2kd','jmac100.auth0.com', {});
+  lock = new Auth0Lock('IAhCDwQyyKwBDkcVKeepqLRuuSlmV2kd','jmac100.auth0.com', {
+    languageDictionary: {
+      title: "madamedelia.com"
+    },
+    theme: {
+      logo: 'assets/login.png',
+      primaryColor: '#022f5a'
+    }
+  });
 
   constructor(private router: Router) { 
     this.lock.on("authenticated", (authResult) => {
