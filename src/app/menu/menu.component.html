@@ -10,23 +10,32 @@
         </div>
         <div class="navbar-collapse collapse" style="height:100%;">
             <ul class="nav navbar-nav">
-                <li><a routerLink="/home" routerLinkActive="active">Bienvenue</a></li>
-                <li><a routerLink="/why-french-is-important" routerLinkActive="active">Why is French Important?</a></li>
-                <li><a routerLink="/announcements" routerLinkActive="active">Les Annonces</a></li>
-                <li><a routerLink="/information-for-parents" routerLinkActive="active">Parents</a></li>
-                <li><a routerLink="/supplies" routerLinkActive="active">Supplies</a></li>
-                <li><a routerLink="/no-homework" routerLinkActive="active">No Homework?</a></li>
-                <li><a routerLink="/useful-links" routerLinkActive="active">Useful Links</a></li>
-                <li><a routerLink="/tribes" routerLinkActive="active">Tribes</a></li>
+                <li><a routerLink="/home" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a></li>
+                <li><a routerLink="/why-french-is-important" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Why is French Important?</a></li>
+                <li><a routerLink="/announcements" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Les Annonces</a></li>
+                <li><a routerLink="/information-for-parents" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Parents</a></li>
+                <li><a routerLink="/supplies" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Supplies</a></li>
+                <li><a routerLink="/no-homework" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>No Homework?</a></li>
+                <li><a routerLink="/useful-links" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Useful Links</a></li>
+                <li><a routerLink="/tribes" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Tribes</a></li>
                 <li><a href="http://madamemacdonald.com/Music/Default.aspx" target="_blank">La Musique</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grade 1<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a routerLink="/grade-1-home">Bienvenue</a></li>
+                    <li><a routerLink="/grade-1-home" onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a></li>
                     <li><a routerLink="/grade-1-media">Music and Games</a></li>
                   </ul>
                 </li>
-                <li class="logout" *ngIf="auth.authenticated()"><a (click)="auth.logout()">Logout</a></li>
+                <li class="logout" *ngIf="auth.authenticated()" onclick='$(".navbar-collapse").collapse("hide");'
+                    ><a (click)="auth.logout()">Logout</a></li>
             </ul>
         </div>
     </div>
