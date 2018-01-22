@@ -16,7 +16,7 @@ export class NewsComponent implements OnInit {
   (
     private _service: MadamedeliaService, 
     private _sanitizer: DomSanitizer,
-    private auth: AuthService
+    public auth: AuthService
   ) { }
 
   public get Announcement() : SafeHtml {
