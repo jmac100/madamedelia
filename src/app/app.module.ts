@@ -22,6 +22,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
 // Services
 import { MadamedeliaService } from './services/madamedelia.service';
 import { AuthService } from './services/auth.service';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AuthService } from './services/auth.service';
     LinksComponent,
     NewsComponent,
     Grade1homeComponent,
-    Grade1mediaComponent
+    Grade1mediaComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { AuthService } from './services/auth.service';
     CKEditorModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
+      { path: 'callback', component: CallbackComponent },
       { path: 'why-french-is-important', component: WhyfrenchComponent },
       { path: 'announcements', component: NewsComponent },
       { path: 'information-for-parents', component: ParentsComponent },

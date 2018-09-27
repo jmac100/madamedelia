@@ -1,4 +1,5 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 declare var $:any;
 
@@ -12,7 +13,8 @@ export class AppComponent implements AfterViewInit {
   footerDate = new Date().getFullYear();
 
   private el: HTMLElement;
-  constructor(el: ElementRef) {
+  constructor(el: ElementRef, public auth: AuthService) {
+    auth.handleAuthentication();
     this.el = el.nativeElement;
   }
 
