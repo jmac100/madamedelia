@@ -1,6 +1,6 @@
 <div class="fade-me-in margin-bottom-lg">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 well text-center">
+        <div class="col-md-8 offset-md-2 well text-center">
             <h2>Les Annonces</h2>
         </div>
     </div>
@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="row margin-top-md fade-me-in" *ngIf="announcement">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 offset-md-3">
             <div [innerHTML]="Announcement"></div>
         </div>
     </div>
@@ -18,16 +18,12 @@
 <div class="fade-me-in margin-bottom-lg" *ngIf="announcement && auth.authenticated()">
     <div class="row margin-top-md">
         <div class="col-md-12">
-            <ckeditor
-                name="editor"
-                [(ngModel)]="announcement.body"
-                [config]="{
+            <ckeditor name="editor" [(ngModel)]="announcement.body" [config]="{
                     toolbarCanCollapse: true,
                     removeButtons: 'Save',
                     height: 600
                 }"
-                (change)="changed($event)"
-                debounce="500">
+                (change)="changed($event)" debounce="500">
             </ckeditor>
         </div>
     </div>

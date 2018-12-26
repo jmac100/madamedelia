@@ -1,42 +1,42 @@
-<div class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-text navbar-toggle pull-right btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <i class="fa fa-bars space"></i> Menu
-            </button>            
-            <a class="navbar-brand login" *ngIf="!auth.authenticated()" (click)="auth.login()">Le Site Web de Madame D'Elia</a>
-            <a class="navbar-brand" *ngIf="auth.authenticated()" href="/">Le Site Web de Madame D'Elia</a>
-        </div>
-        <div class="navbar-collapse collapse" style="height:100%;">
-            <ul class="nav navbar-nav">
-                <li><a routerLink="/home" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a></li>
-                <li><a routerLink="/why-french-is-important" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Why is French Important?</a></li>
-                <li><a routerLink="/announcements" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Les Annonces</a></li>
-                <li><a routerLink="/information-for-parents" routerLinkActive="active"
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <a class="navbar-brand" *ngIf="!auth.authenticated()" (click)="auth.login()">Le Site Web de Madame D'Elia</a>
+    <a class="navbar-brand" *ngIf="auth.authenticated()" href="/">Le Site Web de Madame D'Elia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/why-french-is-important" routerLinkActive="active"
+                    onclick='$(".navbar-collapse").collapse("hide");'>Why
+                    is French Important?</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/announcements" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>Les
+                    Annonces</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/information-for-parents" routerLinkActive="active"
                     onclick='$(".navbar-collapse").collapse("hide");'>Parents</a></li>
-                <li><a routerLink="/supplies" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Supplies</a></li>
-                <li><a routerLink="/no-homework" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>No Homework?</a></li>
-                <li><a routerLink="/useful-links" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Useful Links</a></li>
-                <li><a routerLink="/tribes" routerLinkActive="active"
-                    onclick='$(".navbar-collapse").collapse("hide");'>Tribes</a></li>
-                <li><a href="http://madamemacdonald.com/Music/Default.aspx" target="_blank">La Musique</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grade 1<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a routerLink="/grade-1-home" onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a></li>
-                    <li><a routerLink="/grade-1-media">Music and Games</a></li>
-                  </ul>
-                </li>
-                <li class="logout" *ngIf="auth.authenticated()" onclick='$(".navbar-collapse").collapse("hide");'
-                    ><a (click)="auth.logout()">Logout</a></li>
-            </ul>
-        </div>
+            <li class="nav-item"><a class="nav-link" routerLink="/supplies" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>Supplies</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/no-homework" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>No
+                    Homework?</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/useful-links" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>Useful
+                    Links</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/tribes" routerLinkActive="active" onclick='$(".navbar-collapse").collapse("hide");'>Tribes</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://madamemacdonald.com/Music/Default.aspx" target="_blank">La
+                    Musique</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Grade 1
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" routerLink="/grade-1-home" onclick='$(".navbar-collapse").collapse("hide");'>Bienvenue</a>
+                    <a class="dropdown-item" href="#" routerLink="/grade-1-media" onclick='$(".navbar-collapse").collapse("hide");'>Music
+                        and Games</a>
+                </div>
+            </li>
+            <li class="logout mt-2 text-center" *ngIf="auth.authenticated()" onclick='$(".navbar-collapse").collapse("hide");'><a
+                    (click)="auth.logout()">Logout</a></li>
+        </ul>
     </div>
-</div>
+</nav>

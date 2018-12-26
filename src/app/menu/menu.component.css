@@ -1,3 +1,49 @@
-.nav a.active {
-    background-color: #022f5a;
+.nav-item a.nav-link.active {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.logout>a {
+    color: #00ff00 !important;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+button:focus {
+    outline: none;
+}
+
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+li.nav-item {
+    white-space: nowrap;
+}
+
+@media (min-width: 1198px) {
+    li.nav-item {
+        font-size: .8rem;
+    }  
+}
+
+@media (min-width: 1400px) {
+    li.nav-item {
+        font-size: 1rem;
+    }  
+}
+
+@media (max-width: 1200px) {
+    .navbar-brand, .navbar-toggler-icon {
+        font-size: 14px;
+    }  
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
 }
